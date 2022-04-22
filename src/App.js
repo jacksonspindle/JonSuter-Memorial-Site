@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import ReactDOM from 'react-dom'
+import Style from './style.css'
+import Nav from './components/Nav'
+import LandingPage from './components/LandingPage'
+import Gallery from './components/Gallery'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+export default function App(){
+
+
+    const [page, setPageState] = useState([<LandingPage />])
+
+
+    return (
+        <div>
+            {page}
+            <Nav pageChanger={setPageState} />
+        </div>
+    )
 }
-
-export default App;

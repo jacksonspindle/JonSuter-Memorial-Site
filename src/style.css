@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+* {
+    padding: 0%;
+    box-sizing: border-box;
+    margin: 0%;
+}
+.suterProfile {
+    border-radius: 2.5rem;
+    width: 300px;
+}
+
+.landingPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
+}
+
+.landingPage > h1 {
+    text-align: center;
+    font-family: 'PT Serif',
+    serif;
+    font-style: italic;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.navList{
+    display: flex;
+    margin: 0px;
+    padding: 0%;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-family: 'PT Serif',
+    serif;
+} 
+
+.navList > li {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.navList>li:hover {
+    cursor: pointer;
+    color: #999999;
+}
+
+/* 
+GALLERY PAGE */
+
+.galleryContainer{
+    padding: 2vw 12vw 12vw 12vw;
+}
+
+.imageGallery {
+    margin-top: 3vw;
+}
+
+.imageGallery > img {
+    overflow: hidden;
+    transition: 1s all ease-in-out;
+}
+
+.imageGallery>img:hover {
+    box-shadow: 5px 5px 5px grey;
+    cursor: pointer;
+}
+
+.galleryHeader{
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+
+}
+
+.previewPhoto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.previewPhoto > div {
+    display: flex;
+    
+}
+
+/* 
+SCREENS */
+
+@media only screen and (max-width: 700px) and (min-width: 400px) {
+    .imageGallery {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 20px;
+    
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 700px) {
+    .imageGallery {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 20px;
+
+    }
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1200px) {
+    .imageGallery {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 20px;
+
+    }
+}
+
+@media only screen and (max-width: 1800px) and (min-width: 1500px) {
+    .imageGallery {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-gap: 20px;
+
+    }
+}
